@@ -3,15 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {
   AboutComponent,
-  HomeComponent,
   PathNotFoundComponent,
 } from './layout';
+// import {HashLocationStrategy} from '@angular/common';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent
-  },
   {
     path: 'about',
     component: AboutComponent

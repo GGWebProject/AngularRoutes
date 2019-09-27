@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import {
   AboutComponent,
-  HomeComponent,
   PathNotFoundComponent,
 } from './components';
 
 @NgModule({
-  declarations: [AboutComponent, HomeComponent, PathNotFoundComponent],
+  declarations: [AboutComponent, PathNotFoundComponent],
   imports: [
     CommonModule
   ]
