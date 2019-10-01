@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { AppRoutingModule } from './app-routing.module';
 import { TasksModule } from './tasks/tasks.module';
+import { SpinnerModule } from './widgets/spinner/spinner.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TasksModule } from './tasks/tasks.module';
     FormsModule,
     LayoutModule,
     TasksModule,
+    SpinnerModule.forRoot(),
     // Must be last
     AppRoutingModule,
   ],

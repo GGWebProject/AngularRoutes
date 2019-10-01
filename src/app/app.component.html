@@ -17,12 +17,23 @@
                 <li routerLinkActive="active">
                   <a routerLink="/about">About</a>
                 </li>
+                <li routerLinkActive="active">
+                  <a routerLink="/users">Users</a>
+                </li>
+                <li routerLinkActive="active">
+                  <a routerLink="/admin">Admin</a>
+                </li>
+                <li routerLinkActive="active">
+                  <a routerLink="/login">Login</a>
+                </li>
+
               </ul>
             </div>
           </div>
         </nav>
 
         <div class="container">
+          <app-spinner *ngIf="spinnerService.isVisible()"></app-spinner>
           <!-- #routerOutlet="outlet" - access to the properties of router-outlet directive -->
           <div class="row">
             <div class="col-md-10">
@@ -33,8 +44,13 @@
               </router-outlet>
             </div>
             <div class="col-md-2">
-              <router-outlet name="messsages"></router-outlet>
+              <button class="btn btn-success"
+                      *ngIf="!messagesService.isDisplayed"
+                      (click)="onDisplayMessages()">Show Messages
+              </button>
+              <router-outlet name="messages"></router-outlet>
             </div>
+
           </div>
           <!-- Routed views go here -->
         </div>
